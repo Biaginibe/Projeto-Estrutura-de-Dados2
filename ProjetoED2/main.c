@@ -43,7 +43,7 @@ int main()
 			arrayToSort = setArrayElements(len);
             bead_sort(arrayToSort, len);
             printf("Com Bead Sort\n");
-            exibirOrdenado(arrayToSort, len);
+            printArray(arrayToSort, len);
 
             break;
         case 3:
