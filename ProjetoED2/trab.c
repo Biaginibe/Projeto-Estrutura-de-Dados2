@@ -13,7 +13,7 @@ int submenu(){
             "5- 50.000\n"
             "6- 100.000\n"
             "7- 10\n"
-            "Sua op��o: ");
+            "Sua opção: ");
             scanf("%d", &opcao);
     switch (opcao)
     {
@@ -46,7 +46,7 @@ int submenu(){
 void exibirOrdenado(int *vet, int len){
     int i;
     for(i = 0; i < len; i++){
-        printf("%d\n", vet[i]);
+        printf("%d  ", vet[i]);
     }
 }
 
@@ -57,6 +57,43 @@ void printArray(int *v, int len)
 	for (i=0; i < len; i++)
 		printf("%d ", v[i]);
 	printf("\n");
+}
+
+int *setArrayElements(int length){
+	int *numbersArray = (int*) malloc(length * sizeof(int));
+
+	if (!numbersArray) return NULL;
+
+	srand(time(0));
+    int i;
+	for (i = 0; i < length; i++) {
+		numbersArray[i] = rand() % 10 + 1;
+		/*printf("%d\n", numbersArray[i]);*/
+	}
+
+    return numbersArray; /*retorna endere�o do array*/
+}
+
+int *growingArray(int length){
+    int *numbersArray = (int*) malloc(length * sizeof(int));
+    int i;
+    for(i = 0; i<length; i++){
+        numbersArray[i] = i;
+        printf("%d\n", numbersArray[i]);
+    }
+
+    return numbersArray;
+
+}
+
+int *decreasingArray(int length){
+    int *numbersArray = (int*) malloc(length * sizeof(int));
+    int i;
+    for(i = length; i >=0 ; i--){
+        numbersArray[i] = i;
+        printf("%d\n", numbersArray[i]);
+    }
+    return numbersArray;
 }
 
 void merge(int *v, int l, int m, int len)
@@ -111,7 +148,7 @@ void merge(int *v, int l, int m, int len)
 		j++;
 		k++;
 	}
-	
+
 }
 
 
@@ -128,7 +165,7 @@ void mergeSort(int *v, int l, int len){
 
 		merge(v, l, m, len);
 	}
-	
+
 
 }
 
@@ -185,7 +222,7 @@ void countingSort(int *v, int len){
     printf("Com Counting Sort\n");
     for(i=0;i<=max;++i){
         for(j=1;j<=count[i];++j){
-       printf("%d \n",i);
+       printf("%d  ",i);
        }
     }
 }
