@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-#include <time.h>
+#include <sys/time.h>
 #include "trab.h"
 
 int *setArrayElements(int length);
@@ -10,11 +10,14 @@ int *growingArray(int length);
 
 int *decreasingArray(int length);
 
+double tempo();
+
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
     int opcaosort, len;
 	int *arrayToSort;
+	double tempoAntes, tempoDepois;
 
     printf("Organiza��o de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
             "Escolha o sort que deseja usar para organizar seu vetor:\n"
@@ -87,14 +90,18 @@ int main()
         case 8:
             len = submenu();
 						arrayToSort = setArrayElements(len);
-
+            tempoAntes = tempo();
+            printf("Tempo antes: %lf", tempoAntes);
             bubbleSort(arrayToSort, len);
+            tempoDepois = tempo();
+            printf("Tempo depois: %lf", tempoDepois);
+            printf("Tempo gasto: %f\n", tempoDepois - tempoAntes);
             printf("Com Bubble Sort\n");
             exibirOrdenado(arrayToSort, len);
             break;
         case 9:
             len = submenu();
-						arrayToSort = setArrayElements(len);
+            arrayToSort = setArrayElements(len);
 
             radixsort(arrayToSort, len);
             printf("Com Radix Sort\n");
@@ -159,4 +166,9 @@ int *decreasingArray(int length){
     return numbersArray;
 }
 
+double tempo(){
+    struct timeval tv; //tv de timeval
+    gettimeofday(&tv,NULL);
+    return tv.tv_sec + tv.tv_usec/1000000;
+}
 

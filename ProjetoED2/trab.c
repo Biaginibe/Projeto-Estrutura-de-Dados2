@@ -111,7 +111,7 @@ void merge(int *v, int l, int m, int len)
 		j++;
 		k++;
 	}
-	
+
 }
 
 
@@ -128,7 +128,7 @@ void mergeSort(int *v, int l, int len){
 
 		merge(v, l, m, len);
 	}
-	
+
 
 }
 
