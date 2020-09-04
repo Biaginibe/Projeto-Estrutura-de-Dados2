@@ -6,6 +6,10 @@
 
 int *setArrayElements(int length);
 
+int *growingArray(int length);
+
+int *decreasingArray(int length);
+
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
@@ -119,7 +123,7 @@ int main()
 }
 
 int *setArrayElements(int length) {
-	int *numbersArray = malloc(length);
+	int *numbersArray = (int*) malloc(length * sizeof(int));
 
 	if (!numbersArray) return NULL;
 
@@ -133,5 +137,26 @@ int *setArrayElements(int length) {
     return numbersArray; /*retorna endere�o do array*/
 }
 
+int *growingArray(int length){
+    int *numbersArray = (int*) malloc(length * sizeof(int));
+
+    for(int i = 0; i<length; i++){
+        numbersArray[i] = i;
+        printf("%d\n", numbersArray[i]);
+    }
+
+    return numbersArray;
+
+}
+
+int *decreasingArray(int length){
+    int *numbersArray = (int*) malloc(length * sizeof(int));
+
+    for(int i = length; i >=0 ; i--){
+        numbersArray[i] = i;
+        printf("%d\n", numbersArray[i]);
+    }
+    return numbersArray;
+}
 
 
