@@ -2,12 +2,18 @@ int submenu();
 
 void exibirOrdenado(int *vet, int len); /* ok */
 
+void printArray(int *v, int len);
+
+int *setArrayElements(int length);
+
+int *decreasingArray(int length);
+
+int *growingArray(int length);
+
 /*verificar erro*/
 void mergeSort(int *v, int l, int len);
 
 void bead_sort(int *a, int len);/* ok */
-
-int calc_max(int *v, int len);
 
 void countingSort(int *v, int len);/* erro */
 

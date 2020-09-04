@@ -6,20 +6,28 @@
 
 int *setArrayElements(int length);
 
+<<<<<<< HEAD
 int *growingArray(int length);
 
 int *decreasingArray(int length);
 
 double tempo();
 
+=======
+>>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-    int opcaosort, len;
+    int opcaosort, len, continua;
 	int *arrayToSort;
+<<<<<<< HEAD
 	double tempoAntes, tempoDepois;
 
     printf("Organiza��o de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
+=======
+    do{
+    printf("Organização de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
+>>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
             "Escolha o sort que deseja usar para organizar seu vetor:\n"
             "1- Merge Sort\n"
             "2- Bead Sort\n"
@@ -32,7 +40,7 @@ int main()
             "9- Radix Sort\n"
             "10- Heap Sort\n"
             "11- Shell Sort\n"
-            "Sua op��o: ");
+            "Sua opção: ");
             scanf("%d", &opcaosort);
 
     switch (opcaosort){
@@ -44,6 +52,9 @@ int main()
             mergeSort(arrayToSort, 0, len-1);
             printf("Com Merge Sort\n");
             printArray(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 2:
             len = submenu();
@@ -51,19 +62,27 @@ int main()
             bead_sort(arrayToSort, len);
             printf("Com Bead Sort\n");
             printArray(arrayToSort, len);
-
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 3:
             len = submenu();
-						arrayToSort = setArrayElements(len);
+            arrayToSort = setArrayElements(len);
             countingSort(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 4:
             len = submenu();
-						arrayToSort = setArrayElements(len);
+            arrayToSort = setArrayElements(len);
             quick_sort(arrayToSort, 0, len);
             printf("Com Quick Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 5:
             len = submenu();
@@ -71,100 +90,92 @@ int main()
             insertion_Sort(arrayToSort,0 , len);
             printf("Com Insertion Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 6:
             len = submenu();
-						arrayToSort = setArrayElements(len);
+            arrayToSort = setArrayElements(len);
             timSort(arrayToSort, len);
             printf("Com Tim Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 7:
             len = submenu();
-						arrayToSort = setArrayElements(len);
-
+            arrayToSort = setArrayElements(len);
             selectionSort(arrayToSort, len);
             printf("Com Selection Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 8:
             len = submenu();
+<<<<<<< HEAD
 						arrayToSort = setArrayElements(len);
             tempoAntes = tempo();
             printf("Tempo antes: %lf", tempoAntes);
+=======
+            arrayToSort = setArrayElements(len);
+>>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
             bubbleSort(arrayToSort, len);
             tempoDepois = tempo();
             printf("Tempo depois: %lf", tempoDepois);
             printf("Tempo gasto: %f\n", tempoDepois - tempoAntes);
             printf("Com Bubble Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 9:
             len = submenu();
             arrayToSort = setArrayElements(len);
+<<<<<<< HEAD
 
+=======
+>>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
             radixsort(arrayToSort, len);
             printf("Com Radix Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 10:
             len = submenu();
-						arrayToSort = setArrayElements(len);
+            arrayToSort = setArrayElements(len);
             printf("Com Heap Sort\n");
             HeapSort(arrayToSort, len);
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
         case 11:
             len = submenu();
-						arrayToSort = setArrayElements(len);
-
+            arrayToSort = setArrayElements(len);
             shellSort(arrayToSort, len);
             printf("Com Shell Sort\n");
             exibirOrdenado(arrayToSort, len);
+            free(arrayToSort);
+            printf("Continua: ");
+            scanf("%d", &continua);
             break;
 
         default:
             break;
         }
 }
+}while(continua == 0);
 }
 
-int *setArrayElements(int length) {
-	int *numbersArray = (int*) malloc(length * sizeof(int));
 
-	if (!numbersArray) return NULL;
-
-	srand(time(0));
-    int i;
-	for (i = 0; i < length; i++) {
-		numbersArray[i] = rand() % 10 + 1;
-		printf("%d\n", numbersArray[i]);
-	}
-
-    return numbersArray; /*retorna endere�o do array*/
-}
-
-int *growingArray(int length){
-    int *numbersArray = (int*) malloc(length * sizeof(int));
-
-    for(int i = 0; i<length; i++){
-        numbersArray[i] = i;
-        printf("%d\n", numbersArray[i]);
-    }
-
-    return numbersArray;
-
-}
-
-int *decreasingArray(int length){
-    int *numbersArray = (int*) malloc(length * sizeof(int));
-
-    for(int i = length; i >=0 ; i--){
-        numbersArray[i] = i;
-        printf("%d\n", numbersArray[i]);
-    }
-    return numbersArray;
-}
 
 double tempo(){
     struct timeval tv; //tv de timeval
