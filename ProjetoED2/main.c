@@ -6,28 +6,25 @@
 
 int *setArrayElements(int length);
 
-<<<<<<< HEAD
 int *growingArray(int length);
 
 int *decreasingArray(int length);
 
-double tempo();
+double ftempoAntes();
+double ftempoDepois();
 
-=======
->>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
+
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
     int opcaosort, len, continua;
 	int *arrayToSort;
-<<<<<<< HEAD
 	double tempoAntes, tempoDepois;
 
-    printf("Organiza��o de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
-=======
+    printf("Organiza��o de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n");
+
     do{
     printf("Organização de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
->>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
             "Escolha o sort que deseja usar para organizar seu vetor:\n"
             "1- Merge Sort\n"
             "2- Bead Sort\n"
@@ -116,16 +113,16 @@ int main()
             break;
         case 8:
             len = submenu();
-<<<<<<< HEAD
+
 						arrayToSort = setArrayElements(len);
-            tempoAntes = tempo();
-            printf("Tempo antes: %lf", tempoAntes);
-=======
+            tempoAntes = ftempoAntes();
+            printf("Tempo antes: %lf\n", tempoAntes);
+
             arrayToSort = setArrayElements(len);
->>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
+
             bubbleSort(arrayToSort, len);
-            tempoDepois = tempo();
-            printf("Tempo depois: %lf", tempoDepois);
+            tempoDepois = ftempoDepois();
+            printf("Tempo depois: %lf\n", tempoDepois);
             printf("Tempo gasto: %f\n", tempoDepois - tempoAntes);
             printf("Com Bubble Sort\n");
             exibirOrdenado(arrayToSort, len);
@@ -136,10 +133,7 @@ int main()
         case 9:
             len = submenu();
             arrayToSort = setArrayElements(len);
-<<<<<<< HEAD
 
-=======
->>>>>>> ba99f134125429fb68dcba60cdb2188d397a6a99
             radixsort(arrayToSort, len);
             printf("Com Radix Sort\n");
             exibirOrdenado(arrayToSort, len);
@@ -177,9 +171,15 @@ int main()
 
 
 
-double tempo(){
-    struct timeval tv; //tv de timeval
-    gettimeofday(&tv,NULL);
-    return tv.tv_sec + tv.tv_usec/1000000;
+double ftempoAntes(){
+    struct timeval Tempo_antes; //tv de timeval
+    gettimeofday(&Tempo_antes, NULL);
+    return (Tempo_antes.tv_sec + Tempo_antes.tv_usec/1000000.0);
+}
+
+double ftempoDepois(){
+    struct timeval Tempo_depois; //tv de timeval
+    gettimeofday(&Tempo_depois, NULL);
+    return (Tempo_depois.tv_sec + Tempo_depois.tv_usec/1000000.0);
 }
 

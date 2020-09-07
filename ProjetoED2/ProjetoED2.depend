@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1599250635 source:c:\if\projetoed\projeto-estrutura-de-dados2\projetoed2\main.c
+1599489777 source:c:\if\projetoed\projeto-estrutura-de-dados2\projetoed2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<sys/time.h>
 	"trab.h"
 
-1599223215 c:\if\projetoed\projeto-estrutura-de-dados2\projetoed2\trab.h
+1599251913 c:\if\projetoed\projeto-estrutura-de-dados2\projetoed2\trab.h
 
-1599249488 source:c:\if\projetoed\projeto-estrutura-de-dados2\projetoed2\trab.c
+1599251913 source:c:\if\projetoed\projeto-estrutura-de-dados2\projetoed2\trab.c
 	<stdlib.h>
 	<stdio.h>
 	<locale.h>
