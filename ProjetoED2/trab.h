@@ -10,27 +10,27 @@ int *decreasingArray(int length);
 
 int *growingArray(int length);
 
-/*verificar erro*/
+
 void mergeSort(int *v, int l, int len);
 
-void bead_sort(int *a, int len);/* ok */
+void bead_sort(int *a, int len);
 
-void countingSort(int *v, int len);/* erro */
+void countingSort(int *v, int len);
 
-void quick_sort(int *v, int ini, int len);/* ok */
+void quick_sort(int *v, int ini, int len);
 
-void insertion_Sort(int *v, int beg, int len);/* ok */
+void insertion_Sort(int *v, int beg, int len);
 
-void timSort(int *v, int len);/* ok */
+void timSort(int *v, int len);
 
-void selectionSort(int *v, int len);/* ok */
+void selectionSort(int *v, int len);
 
-void bubbleSort(int *v, int len);/* ok */
+void bubbleSort(int *v, int len);
 
-void radixsort(int *v, int len);/* ok */
+void radixsort(int *v, int len);
 
-void HeapSort(int *V, int len);/* ok */
+void HeapSort(int *V, int len);
 
-void shellSort(int *v, int len);/* ok */
+void shellSort(int *v, int len);
 
 void countingSort(int *v, int len);

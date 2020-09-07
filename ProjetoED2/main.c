@@ -4,11 +4,6 @@
 #include <sys/time.h>
 #include "trab.h"
 
-int *setArrayElements(int length);
-
-int *growingArray(int length);
-
-int *decreasingArray(int length);
 
 double ftempoAntes();
 double ftempoDepois();
@@ -112,18 +107,18 @@ int main()
             scanf("%d", &continua);
             break;
         case 8:
+            /*aqui estão os testes do diego aparentemente*/
             len = submenu();
 
-						arrayToSort = setArrayElements(len);
+            /*arrayToSort = setArrayElements(len);
             tempoAntes = ftempoAntes();
-            printf("Tempo antes: %lf\n", tempoAntes);
+            printf("Tempo antes: %lf\n", tempoAntes);*/
 
             arrayToSort = setArrayElements(len);
-
             bubbleSort(arrayToSort, len);
-            tempoDepois = ftempoDepois();
+            /*tempoDepois = ftempoDepois();
             printf("Tempo depois: %lf\n", tempoDepois);
-            printf("Tempo gasto: %f\n", tempoDepois - tempoAntes);
+            printf("Tempo gasto: %f\n", tempoDepois - tempoAntes);*/
             printf("Com Bubble Sort\n");
             exibirOrdenado(arrayToSort, len);
             free(arrayToSort);
@@ -172,13 +167,13 @@ int main()
 
 
 double ftempoAntes(){
-    struct timeval Tempo_antes; //tv de timeval
+    struct timeval Tempo_antes; /*tv de timeval*/
     gettimeofday(&Tempo_antes, NULL);
     return (Tempo_antes.tv_sec + Tempo_antes.tv_usec/1000000.0);
 }
 
 double ftempoDepois(){
-    struct timeval Tempo_depois; //tv de timeval
+    struct timeval Tempo_depois; /*tv de timeval*/
     gettimeofday(&Tempo_depois, NULL);
     return (Tempo_depois.tv_sec + Tempo_depois.tv_usec/1000000.0);
 }

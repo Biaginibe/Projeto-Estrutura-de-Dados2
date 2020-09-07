@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <locale.h>
 #include "trab.h"
+#include <time.h>
+#include <sys/time.h>
 
 int submenu(){
     int opcao;
@@ -66,10 +68,12 @@ int *setArrayElements(int length){
 
 	srand(time(0));
     int i;
-	for (i = 0; i < length; i++) {
-		numbersArray[i] = rand() % 10 + 1;
-		/*printf("%d\n", numbersArray[i]);*/
-	}
+
+    for (i = 0; i < length; i++) {
+        numbersArray[i] = rand() % 100 + 1;
+        /*printf("%4d", numbersArray[i]);*/
+    }
+
 
     return numbersArray; /*retorna endere�o do array*/
 }
@@ -210,7 +214,7 @@ void bead_sort(int *a, int len){
 
 
 void countingSort(int *v, int len){
-     int count[50] = {0}, i, j, max;
+     int count[101] = {0}, i, j, max;
      max = v[0];
      for (i = 1; i < len; i++){
 		if (v[i] > max) max = v[i];
