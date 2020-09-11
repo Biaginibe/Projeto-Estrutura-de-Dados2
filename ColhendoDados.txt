@@ -1,0 +1,90 @@
+----------------------//COM VETOR ALEATORIO//--------------------
+
+MERGE SORT
+1.000 - crescente:0.0000		decrescente:0.0000		aleatorio:0.0000
+5.000 - crescente:0.000355		decrescente:0.000570		aleatorio:0.000725
+10.000 - crescente:0.000299		decrescente:0.000620            aleatorio:0.001644
+20.000 - crescente:0.000689		decrescente:0.000956		aleatorio:0.004086
+50.000 - crescente:0.001853		decrescente:0.002311		aleatorio:0.007945
+100.000 - crescente:0.005005		decrescente:0.013760		aleatorio:0.023506
+
+BEAD SORT
+1.000 - crescente:0.003015           decrescente: 0.005311           	aleatorio : 0.005527
+5.000 - crescente:0.225535           decrescente: 0.449002         	aleatorio : 0.450542
+10.000 - crescente:1.016838          decrescente: 2,481075           	aleatorio : 2,485466
+20.000 - crescente:9,567149           decrescente:19,741641            aleatorio:19,773746 
+50.000 - crescente:?	           decrescente:?            aleatorio :?
+100.000 - crescente:?           decrescente:?            aleatorio :?
+
+COUNTING SORT
+1.000 - crescente:0.000000           decrescente:0.000000            aleatorio :0.000000
+5.000 - crescente:0.000000           decrescente:0.000000            aleatorio :0.000000
+10.000 - crescente:0.000000           decrescente:0.000000            aleatorio :0.000000
+20.000 - crescente:0.000000           decrescente:0.000000            aleatorio:0.000000
+50.000 - crescente:0.000000           decrescente:0.000000            aleatorio :0.000000
+100.000 - crescente:0.000000           decrescente:0.000000            aleatorio :0.000000
+
+
+QUICK SORT
+1.000 - crescente:0.000200           decrescente:0.000402            aleatorio:0,000502
+5.000 - crescente:0.005851           decrescente:0.010677            aleatorio:0,011177
+10.000 - crescente:0.021107           decrescente:0.042010            aleatorio:0,042890
+20.000 - crescente:0.086001           decrescente:0.168846            aleatorio:0,171600
+50.000 - crescente:0.854706           decrescente:1,586785            aleatorio:1,602007
+100.000 - crescente:3.008655           decrescente:5,735488            aleatorio:5,770117
+
+INSERTION SORT
+1.000 - crescente:0.000000           decrescente:0.000000            aleatorio:0.000202
+5.000 - crescente:0.000000           decrescente:0.000000            aleatorio:0.003239
+10.000 - crescente:0.000099           decrescente:0.000202            aleatorio:0.016823
+20.000 - crescente:0.000101           decrescente:0.000200            aleatorio:0.072014
+50.000 - crescente:0.000100           decrescente:0.000100            aleatorio:0.445233
+100.000 - crescente:0.000000           decrescente:0.000100            aleatorio:2.153936
+
+TIM SORT
+1.000 - crescente:0,000000           decrescente:0,000000            aleatorio:0,000100
+5.000 - crescente:erro          decrescente:erro            aleatorio:erro
+10.000 - crescente:erro          decrescente:erro            aleatorio:erro
+20.000 - crescente:erro          decrescente:erro            aleatorio:erro
+50.000 - crescente:erro          decrescente:erro            aleatorio:erro
+100.000 - crescente:erro          decrescente:erro            aleatorio:erro
+
+SELECTION SORT
+1.000 - crescente:0,000485           decrescente:0.000790            aleatorio:0.001388
+5.000 - crescente:0.017483           decrescente:0.033678            aleatorio:0.049499
+10.000 - crescente:0.054655           decrescente:0.106902            aleatorio:0.167460
+20.000 - crescente:0.220974           decrescente:0.440374            aleatorio:0.656671
+50.000 - crescente:1.360201           decrescente:3.240082           aleatorio:4.859740
+100.000 - crescente:8.866462           decrescente:16.644914            aleatorio:22.720260
+
+BUBBLE SORT
+1.000 - crescente:0.000000           decrescente:0.000000            aleatorio:0.001099
+5.000 - crescente:0.000000           decrescente:0.000000            aleatorio:0.028074
+10.000 - crescente:0.000000            decrescente:0.000000             aleatorio:0.179956
+20.000 - crescente:erro          decrescente:erro            aleatorio:erro
+50.000 - crescente:0.000099           decrescente:0.000099            aleatorio:6.150777
+100.000 - crescente:0.000100           decrescente:0.000200            aleatorio:25.104358
+
+RADIX SORT
+1.000 - crescente:0.000100           decrescente:0.000199            aleatorio:0.000299
+5.000 - crescente:0.000199           decrescente:0.000299            aleatorio:0.000599
+10.000 - crescente:0.000199           decrescente:0.000532            aleatorio:0.000631
+20.000 - crescente:0.001013           decrescente:0.001889            aleatorio:0.002606
+50.000 - crescente:0.002227           decrescente:0.004106            aleatorio:0.005163
+100.000 - crescente:0.005075           decrescente:0.009831            aleatorio:0.016090
+
+HEAP SORT
+1.000 - crescente:0.000000           decrescente:0.000000            aleatorio:0.000000
+5.000 - crescente:0.000100           decrescente:0.000383            aleatorio:0,001384
+10.000 - crescente:0.000500           decrescente:0.001105            aleatorio:0.001863
+20.000 - crescente:0.001259           decrescente:0.002400            aleatorio:0.004096
+50.000 - crescente:0.003199           decrescente:0.005897            aleatorio:0.012120
+100.000 - crescente:0.006670           decrescente:0.014935            aleatorio:0.037635
+
+SHELL SORT
+1.000 - crescente:0.000100           decrescente:0.000100            aleatorio:0.000100
+5.000 - crescente:0.000100           decrescente:0.000199            aleatorio:0.001002
+10.000 - crescente:0.000154           decrescente:0.000353            aleatorio:0.001370
+20.000 - crescente:0.000199           decrescente:0.000399            aleatorio:0.001597
+50.000 - crescente:0.001094           decrescente:0.002087            aleatorio:0.005319
+100.000 - crescente:0.002611           decrescente:0.005043            aleatorio:0.027502

@@ -68,13 +68,13 @@ int *setArrayElements(int length){
 
 	srand(time(0));
     int i;
-    //printf("aleatorio: ");
+    printf("aleatorio: ");
     for (i = 0; i < length; i++) {
         numbersArray[i] = rand() % 100 + 1;
-        //printf("%d ", numbersArray[i]);
+        /*printf("%d ", numbersArray[i]);*/
     }
 
-    //printf("\n");
+    /*printf("\n");*/
     return numbersArray; /*retorna endere�o do array*/
 }
 
@@ -83,12 +83,12 @@ int *growingArray(int length){
 
 
     int i;
-    //printf("crescente: ");
+    /*printf("crescente: ");*/
     for(i = 0; i<length; i++){
         numbersArray[i] = i;
-        //printf("%d ", numbersArray[i]);
+        /*printf("%d ", numbersArray[i]);*/
     }
-    //printf("\n");
+    /*printf("\n");*/
     return numbersArray;
 
 }
@@ -96,12 +96,12 @@ int *growingArray(int length){
 int *decreasingArray(int length){
     int *numbersArray = (int*) malloc(length * sizeof(int));
     int i;
-    //printf("decrescente: ");
+    /*printf("decrescente: ");*/
     for(i = length - 1; i >=0 ; i--){
         numbersArray[i] = i;
-        //printf("%d ", numbersArray[i]);
+        /*printf("%d ", numbersArray[i]);*/
     }
-    //printf("\n");
+    /*printf("\n");*/
     return numbersArray;
 }
 
@@ -219,7 +219,7 @@ void bead_sort(int *a, int len){
 
 void countingSort(int *v, int len){
      int count[len], i, j, max;
-     for (int i = 0; i < len; i++) count[i] = 0;
+     for (i = 0; i < len; i++) count[i] = 0;
      max = v[0];
      for (i = 1; i < len; i++){
 		if (v[i] > max) max = v[i];

@@ -18,7 +18,7 @@ int main()
 	double tempos[10];
 	int flag = 0;
 	double media = 0;
-
+do{
     printf("Ordenação de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
             "Escolha o sort que deseja usar para organizar seu vetor:\n"
             "1- Merge Sort\n"
@@ -35,7 +35,7 @@ int main()
             "Sua opção: ");
             scanf("%d", &opcaosort);
 
-    switch (opcaosort) { 
+    switch (opcaosort) {
         case 1:
             len = submenu();
             printf("Ordendando com Merge Sort...\n");
@@ -45,7 +45,8 @@ int main()
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
 
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -62,6 +63,8 @@ int main()
                 printf("Tempo médio para %s com %d elementos: %lf\n", flag == 0 ? "array crescente" : flag == 1 ? "array decrescente" : "array aleatorio", len, media / 10);
                 flag++;
             }
+
+            scanf("%d", &continua);
             break;
         case 2:
             len = submenu();
@@ -71,8 +74,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -89,6 +92,7 @@ int main()
                 printf("Tempo médio para %s com %d elementos: %lf\n", flag == 0 ? "array crescente" : flag == 1 ? "array decrescente" : "array aleatorio", len, media / 10);
                 flag++;
             }
+            scanf("%d", &continua);
             break;
         case 3:
             len = submenu();
@@ -98,8 +102,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -125,8 +129,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -152,8 +156,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -179,8 +183,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -206,8 +210,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -233,8 +237,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -260,8 +264,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -287,8 +291,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -313,8 +317,8 @@ int main()
                 if (flag == 0) printf("Etapa Atual: vetor crescente\n");
                 if (flag == 1) printf("Etapa Atual: vetor decrescente\n");
                 if (flag == 2) printf("Etapa Atual: vetor aleatorio\n");
-
-                for (int i = 0; i < 10; i++) {
+                int i;
+                for (i = 0; i < 10; i++) {
                     if (flag == 0) arrayToSort = growingArray(len);
                     if (flag == 1) arrayToSort = decreasingArray(len);
                     if (flag == 2) arrayToSort = setArrayElements(len);
@@ -335,11 +339,9 @@ int main()
         default:
             break;
         }
-    
 
-    // do {
-        
-    // } while(continua == 0);
+
+     }while(continua == 0);
 }
 
 

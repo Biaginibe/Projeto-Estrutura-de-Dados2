@@ -14,3 +14,20 @@
 	<locale.h>
 	"trab.h"
 
+1599829111 source:c:\users\biahs\onedrive\Área de trabalho\projeto-estrutura-de-dados2\projetoed2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<sys/time.h>
+	"trab.h"
+
+1599498339 c:\users\biahs\onedrive\Área de trabalho\projeto-estrutura-de-dados2\projetoed2\trab.h
+
+1599853877 source:c:\users\biahs\onedrive\Área de trabalho\projeto-estrutura-de-dados2\projetoed2\trab.c
+	<stdlib.h>
+	<stdio.h>
+	<locale.h>
+	"trab.h"
+	<time.h>
+	<sys/time.h>
+

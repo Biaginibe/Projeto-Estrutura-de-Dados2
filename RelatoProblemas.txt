@@ -1,0 +1,32 @@
+Merge sort
+Retorna os resultados de tempo em todos os casos mas depois disso por algum motivo da erro de memória.
+
+Bead sort
+Mesma coisa no caso de 500, 1.000, 5.000, 10.000 de elementos 20.000 elementos ele já fica muito lento mas vai, já com 50.000 e 100.000 elementos não mostra os resultados de tempo, o erro vem antes disso.
+
+Counting sort
+Nenhum erro e o sort é incrivelmente rápido, tudo ficou em zero.
+
+Quick sort
+Erro gerando 50.000 elementos no vetor, não consegue retornar o tempo, erro de memória.
+
+Insertion sort
+Zero erros, os dados só me parecem suspeitos kkk.
+
+Tim sort
+Erro a partir de 5.000, erro de memória -1073741571.
+
+Selection sort
+Tranquilo.
+
+Bubble sort
+Ele da erro de memória mas se não desistir uma hora vai, só o com 20.000 elementos realmente não foi
+
+Radix sort
+Perfeito e rápido.
+
+Heap sort
+Perfeito e rápido.
+
+Shell sort
+Perfeito e rápido.
