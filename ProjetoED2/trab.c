@@ -8,37 +8,37 @@
 int submenu(){
     int opcao;
     printf("Escolha o n�mero de elementos que deseja dentro do seu vetor:\n"
-            "1- 1.000\n"
-            "2- 5.000\n"
-            "3- 10.000\n"
-            "4- 20.000\n"
-            "5- 50.000\n"
-            "6- 100.000\n"
-            "7- 10\n"
+            "1- 500\n"
+            "2- 1.000\n"
+            "3- 5.000\n"
+            "4- 10.000\n"
+            "5- 20.000\n"
+            "6- 50.000\n"
+            "7- 100.000\n"
             "Sua opção: ");
             scanf("%d", &opcao);
     switch (opcao)
     {
     case 1:
-        return 1000;
+        return 500;
         break;
     case 2:
-        return 5000;
+        return 1000;
         break;
     case 3:
-        return 10000;
+        return 5000;
         break;
     case 4:
-        return 20000;
+        return 10000;
         break;
     case 5:
-        return 50000;
+        return 20000;
         break;
     case 6:
-        return 100000;
+        return 50000;
         break;
     case 7:
-        return 10;
+        return 100000;
         break;
     default: printf("\n            que?                  \n");
         break;
@@ -68,24 +68,27 @@ int *setArrayElements(int length){
 
 	srand(time(0));
     int i;
-
+    //printf("aleatorio: ");
     for (i = 0; i < length; i++) {
         numbersArray[i] = rand() % 100 + 1;
-        /*printf("%4d", numbersArray[i]);*/
+        //printf("%d ", numbersArray[i]);
     }
 
-
+    //printf("\n");
     return numbersArray; /*retorna endere�o do array*/
 }
 
 int *growingArray(int length){
     int *numbersArray = (int*) malloc(length * sizeof(int));
+
+
     int i;
+    //printf("crescente: ");
     for(i = 0; i<length; i++){
         numbersArray[i] = i;
-        printf("%d\n", numbersArray[i]);
+        //printf("%d ", numbersArray[i]);
     }
-
+    //printf("\n");
     return numbersArray;
 
 }
@@ -93,10 +96,12 @@ int *growingArray(int length){
 int *decreasingArray(int length){
     int *numbersArray = (int*) malloc(length * sizeof(int));
     int i;
-    for(i = length; i >=0 ; i--){
+    //printf("decrescente: ");
+    for(i = length - 1; i >=0 ; i--){
         numbersArray[i] = i;
-        printf("%d\n", numbersArray[i]);
+        //printf("%d ", numbersArray[i]);
     }
+    //printf("\n");
     return numbersArray;
 }
 
@@ -157,7 +162,6 @@ void merge(int *v, int l, int m, int len)
 
 
 void mergeSort(int *v, int l, int len){
-
 	if (l < len)
 	{
 
@@ -214,7 +218,8 @@ void bead_sort(int *a, int len){
 
 
 void countingSort(int *v, int len){
-     int count[101] = {0}, i, j, max;
+     int count[len], i, j, max;
+     for (int i = 0; i < len; i++) count[i] = 0;
      max = v[0];
      for (i = 1; i < len; i++){
 		if (v[i] > max) max = v[i];
@@ -223,10 +228,8 @@ void countingSort(int *v, int len){
         count[v[i]]=count[v[i]]+1;
      }
 
-    printf("Com Counting Sort\n");
     for(i=0;i<=max;++i){
         for(j=1;j<=count[i];++j){
-       printf("%d  ",i);
        }
     }
 }
