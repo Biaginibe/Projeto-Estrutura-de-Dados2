@@ -14,12 +14,12 @@
 	<locale.h>
 	"trab.h"
 
-1599829111 source:c:\users\biahs\onedrive\햞ea de trabalho\projeto-estrutura-de-dados2\projetoed2\main.c
+1599872668 source:c:\users\biahs\onedrive\햞ea de trabalho\projeto-estrutura-de-dados2\projetoed2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<sys/time.h>
-	"trab.h"
+	"ordenacao.h"
 
 1599498339 c:\users\biahs\onedrive\햞ea de trabalho\projeto-estrutura-de-dados2\projetoed2\trab.h
 
@@ -28,6 +28,16 @@
 	<stdio.h>
 	<locale.h>
 	"trab.h"
+	<time.h>
+	<sys/time.h>
+
+1599872442 c:\users\biahs\onedrive\햞ea de trabalho\projeto-estrutura-de-dados2\projetoed2\ordenacao.h
+
+1599872668 source:c:\users\biahs\onedrive\햞ea de trabalho\projeto-estrutura-de-dados2\projetoed2\ordenacao.c
+	<stdlib.h>
+	<stdio.h>
+	<locale.h>
+	"ordenacao.h"
 	<time.h>
 	<sys/time.h>
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <sys/time.h>
-#include "organiza.h"
+#include "ordenacao.h"
 
 
 double ftempoAntes();

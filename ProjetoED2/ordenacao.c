@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <locale.h>
-#include "organiza.h"
+#include "ordenacao.h"
 #include <time.h>
 #include <sys/time.h>
 
