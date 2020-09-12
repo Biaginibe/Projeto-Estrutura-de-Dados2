@@ -1,13 +1,21 @@
 int submenu();
 
-void exibirOrdenado(int *vetOrg, int len);
+void exibirOrdenado(int *vet, int len); /* ok */
 
-/*verificar erro*/
+void printArray(int *v, int len);
+
+int *setArrayElements(int length);
+
+int *decreasingArray(int length);
+
+int *growingArray(int length);
+
+
 void mergeSort(int *v, int l, int len);
 
 void bead_sort(int *a, int len);
 
-void counting_sort(int *v,int n,int len);
+void countingSort(int *v, int len);
 
 void quick_sort(int *v, int ini, int len);
 
@@ -24,3 +32,4 @@ void radixsort(int *v, int len);
 void HeapSort(int *V, int len);
 
 void shellSort(int *v, int len);
+

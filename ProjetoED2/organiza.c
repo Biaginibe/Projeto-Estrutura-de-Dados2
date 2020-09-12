@@ -1,38 +1,43 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <locale.h>
-#include "trab.h"
+#include "organiza.h"
+#include <time.h>
+#include <sys/time.h>
 
 int submenu(){
     int opcao;
-    printf("Organização de vetores usando sorts - DEFININDO A COMPLEXIDADE\n\n\n"
-            "Escolha o número de elementos que deseja dentro do seu vetor:\n"
-            "1- 1.000\n"
-            "2- 5.000\n"
-            "3- 10.000\n"
-            "4- 20.000\n"
-            "5- 50.000\n"
-            "6- 100.000\n"
-            "Sua opção: ");
+    printf("Escolha o nï¿½mero de elementos que deseja dentro do seu vetor:\n"
+            "1- 500\n"
+            "2- 1.000\n"
+            "3- 5.000\n"
+            "4- 10.000\n"
+            "5- 20.000\n"
+            "6- 50.000\n"
+            "7- 100.000\n"
+            "Sua opÃ§Ã£o: ");
             scanf("%d", &opcao);
     switch (opcao)
     {
     case 1:
-        return 1000;
+        return 500;
         break;
     case 2:
-        return 5000;
+        return 1000;
         break;
     case 3:
-        return 10000;
+        return 5000;
         break;
     case 4:
-        return 20000;
+        return 10000;
         break;
     case 5:
-        return 50000;
+        return 20000;
         break;
     case 6:
+        return 50000;
+        break;
+    case 7:
         return 100000;
         break;
     default: printf("\n            que?                  \n");
@@ -43,10 +48,62 @@ int submenu(){
 void exibirOrdenado(int *vet, int len){
     int i;
     for(i = 0; i < len; i++){
-        printf("%d\n", vet[i]);
+        printf("%d  ", vet[i]);
     }
 }
 
+
+void printArray(int *v, int len)
+{
+	int i;
+	for (i=0; i < len; i++)
+		printf("%d ", v[i]);
+	printf("\n");
+}
+
+int *setArrayElements(int length){
+	int *numbersArray = (int*) malloc(length * sizeof(int));
+
+	if (!numbersArray) return NULL;
+
+	srand(time(0));
+    int i;
+    printf("aleatorio: ");
+    for (i = 0; i < length; i++) {
+        numbersArray[i] = rand() % 100 + 1;
+        /*printf("%d ", numbersArray[i]);*/
+    }
+
+    /*printf("\n");*/
+    return numbersArray; /*retorna endereï¿½o do array*/
+}
+
+int *growingArray(int length){
+    int *numbersArray = (int*) malloc(length * sizeof(int));
+
+
+    int i;
+    /*printf("crescente: ");*/
+    for(i = 0; i<length; i++){
+        numbersArray[i] = i;
+        /*printf("%d ", numbersArray[i]);*/
+    }
+    /*printf("\n");*/
+    return numbersArray;
+
+}
+
+int *decreasingArray(int length){
+    int *numbersArray = (int*) malloc(length * sizeof(int));
+    int i;
+    /*printf("decrescente: ");*/
+    for(i = length - 1; i >=0 ; i--){
+        numbersArray[i] = i;
+        /*printf("%d ", numbersArray[i]);*/
+    }
+    /*printf("\n");*/
+    return numbersArray;
+}
 
 void merge(int *v, int l, int m, int len)
 {
@@ -58,6 +115,7 @@ void merge(int *v, int l, int m, int len)
 	int L[n1], R[n2];
 
 	/* Copy data to temp arrays L[] and R[] */
+
 	for (i = 0; i < n1; i++)
 		L[i] = v[l + i];
 	for (j = 0; j < n2; j++)
@@ -66,10 +124,13 @@ void merge(int *v, int l, int m, int len)
 	i = 0;
 	j = 0;
 	k = l;
+
+
 	while (i < n1 && j < n2)
 	{
 		if (L[i] <= R[j])
 		{
+
 			v[k] = L[i];
 			i++;
 		}
@@ -96,6 +157,7 @@ void merge(int *v, int l, int m, int len)
 		j++;
 		k++;
 	}
+
 }
 
 
@@ -106,16 +168,19 @@ void mergeSort(int *v, int l, int len){
 		int m = l+(len-l)/2;
 
 
-		mergeSort(*v, l, m);
-		mergeSort(*v, m+1, len);
+		mergeSort(v, l, m);
+		mergeSort(v, m+1, len);
 
-		merge(*v, l, m, len);
+		merge(v, l, m, len);
 	}
+
+
 }
 
 
+
 void bead_sort(int *a, int len){
-    printf("Entramos no bead");
+
 	int i, j, max, sum;
 	unsigned char *beads;
 
@@ -152,17 +217,21 @@ void bead_sort(int *a, int len){
 
 
 
+void countingSort(int *v, int len){
+     int count[len], i, j, max;
+     for (i = 0; i < len; i++) count[i] = 0;
+     max = v[0];
+     for (i = 1; i < len; i++){
+		if (v[i] > max) max = v[i];
+     }
+    for(i=0; i<len; ++i){
+        count[v[i]]=count[v[i]]+1;
+     }
 
-void counting_sort(int *v,int n,int len){
-     int count[50]={0},i,j;
-    printf("len = %d\n\n", len);
-        for(i = 0; i < len; i++)
-            printf("v %d = %d\n", i, v[i]);
-    for(i=0;i<n;++i)
-      count[v[i]]=count[v[i]]+1;
-    for(i=0;i<=len;++i)
-    for(j=1;j<=count[i];++j)
-       printf("%d ",i);
+    for(i=0;i<=max;++i){
+        for(j=1;j<=count[i];++j){
+       }
+    }
 }
 
 

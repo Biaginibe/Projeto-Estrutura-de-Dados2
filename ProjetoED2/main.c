@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <sys/time.h>
-#include "trab.h"
+#include "organiza.h"
 
 
 double ftempoAntes();
